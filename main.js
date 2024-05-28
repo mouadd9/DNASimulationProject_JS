@@ -71,13 +71,7 @@ const organismFactory = (id, strd) => {
     return organism;
 };
 
-console.log("TESTING OUR OBJECT AND ITS METHODS \n");
-console.log("-----here are two random strands : \n");
-let randStrand1 = strandGenerator();
-let randStrand2 = strandGenerator();
-console.log(randStrand1 + "\n");
-console.log(randStrand2 + "\n");
-
+console.log("Testing organism functionality\n");
 
 console.log("-----here are two random organisms : \n");
 let organism1 = organismFactory(1, strandGenerator());
@@ -90,17 +84,17 @@ console.log("\n");
 
 console.log("-----let's mutate the strand of the first organism : \n");
 organism1.mutate();
-console.log(JSON.stringify(organism1, null, 2));
+console.log("Mutated Organism 1:", JSON.stringify(organism1, null, 2));
 console.log("\n");
 
 
 console.log("-----let's compare organism1 with organism2 : \n");
-console.log(organism1.compareDNA(organism2));
+console.log("DNA Comparison:", organism1.compareDNA(organism2));
 
 
 console.log("-----let's see the likelyhood of survival of both : \n");
-console.log(organism1.willLikelySurvive());
-console.log(organism2.willLikelySurvive());
+console.log("Organism 1 Survival Likelihood:", organism1.willLikelySurvive());
+console.log("Organism 2 Survival Likelihood:", organism2.willLikelySurvive());
 
 
 console.log("-----lets generate an array of organisms : \n");
